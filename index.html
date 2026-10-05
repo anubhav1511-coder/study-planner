@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Planner</title> 
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body> 
+
+<div class="app">
+    
+    <!-- Sidebar -->
+     <asside class="sidebar">
+        <h2>Study Planner</h2>
+
+        <nav>
+            <button class="nav-btn active">▣ Dashboard</button>
+            <button class="nav-btn">＋ Add Task</button>
+            <button class="nav-btn">📖 Subjects</button>
+            <button class="nav-btn">◷ Study Timer</button>
+            <button class="nav-btn">📊 Statistics</button>
+            <button class="nav-btn">⚙️ Settings</button>
+        </nav>
+
+        <div class="quote">
+            <p>"Small Steps every day lead to big results."</p>
+            <span>- Keep Going 💪</span>
+        </div>
+    </asside>
+    
+    <!-- Main  -->
+     <main class="main">
+
+        <header>
+            <div>
+                <h1>Good Morning,  <span>Anubhav!</span> 👋</h1>
+                <p>Plan. Study. Achieve.</p>
+            </div>
+
+            <div class="header-right">
+                <button id="themeBtn">🌓</button>
+                <div class="profile">A</div>
+                <b>Anubhav</b>
+            </div>
+        </header>
+
+        <!-- Stats -->
+        <section class="stats">
+
+            <div class="stat-card blue">
+                <div>📋</div>
+                <h3>Total Tasks</h3>
+                <strong id="totalTasks">0</strong>
+                <p>All subjects</p>
+            </div>
+            
+            <div class="stat-card green">
+                <div>✅</div>
+                <h3>Completed </h3>
+                <strong id="completedTasks">0</strong>
+                <p>Done</p>
+            </div>
+            
+            <div class="start-card orange">
+                <div>⏱️</div>
+                <h3>Pending</h3>
+                <strong id="pendingTasks">0</strong>
+                <p>Still pending</p>
+            </div>
+
+            <div class="stat-card purple">
+                <div>📊</div>
+                <h3>Progress</h3>
+                <strong id="progress">0%</strong>
+                <div class="progress-bar">
+                    <div id="progress bar"></div>
+                </div>
+            </div>
+
+        </section>
+         
+        <!-- Content -->
+         <section class="content">
+
+            <!--tasks -->
+            <div class="tasks-box">
+
+                 <div class="task-header">
+                    <h2>☑ Tasks / To-Do List</h2>
+
+                    <div>
+                        <input
+                            type="text"
+                            id="search"
+                            placeholder="Search tasks...">
+
+                        <select id="filter">
+                            <option value="all">All</option>
+                            <option value="completed">Completed</option>
+                            <option value="pending">Pending</option>
+                        </select>    
+
+                        <button id="addTaskBtn">➕ Add Task</button>
+                    </div>
+                </div>
+                
+                <div id="taskList"></div>
+
+            </div>
+            
+            <!-- Timer -->
+             <div class="Timer-box" id="timer-section">
+                <h2>⏱️ Study Timer</h2>
+
+                <div class="timer-circle">
+                    <span id="timer">25:00</span>
+                    <small>focus</small>
+                 </div>
+
+                <div class="Timer-buttons">
+                    <button id="startBtn">▶ Start</button>
+                    <button id="resetBtn">🔄 Reset</button>
+                </div> 
+
+                <div class="Timer-buttons">
+                    <button class="time-btn active" data-time="25">25 min</button>
+                    <button class="time-btn" data-time="50">50 min</button>
+                    <button class="time-btn" data-time="90">90 min</button>
+                </div>
+            </div>
+         
+        </section>
+        
+    </main>
+</div>
+
+<!-- Add Task Modal -->
+<div class="modal" id="modal">
+
+     <div class="modal-content">
+
+        <button class="close" id="closeModal">x</button>
+
+        <h2>Add New Task</h2>
+
+        <label>Task Title *</label>
+        <input id="taskTitle" type="text" placeholder="e.g. Complete Chemistery notes">
+
+        <label>Subject *</label>
+        <select id="subject">
+            <option>Web Development</option>
+            <option>Mathematics</option>
+            <option>Physics</option>
+            <option>English</option>
+            <option>Computer Science</option>
+        </select>
+        
+        <label>Due Date</label>
+        <input id="dueDate" type="date">
+
+        <label>Priority</label>
+
+        <div class="priority">
+            <button data-priority="Low">🟢 Low</button>
+            <button data-priority="Medium">🟡 Medium</button>
+            <button data-priority="High">🔴 High</button>
+        </div>
+
+        <label>Description</label>
+        <textarea id="description" placeholder="Add more details..."></textarea>
+
+        <button id="saveTask" class="Save-btn">+ Add Task</button>
+     
+    </div>
+    
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+             
+            
+
+         
+
+            
